@@ -265,5 +265,6 @@ rm ~/.vim/bundle/gccsense/doc/manual.ja.txt
 
 dos2unix ~/.vim/bundle/c.vim--Zemin/after/syntax/c.vim
 dos2unix ~/.vim/bundle/c.vim--Zemin/doc/workpath.txt
+dos2unix ~/.vim/bundle/c.vim--Zemin/plugin/workpath.vim
 echo "Remember to edit  ~/.vim/bundle/c.vim--Zemin/plugin/workpath.vim  to set g:WorkPathList and g:WorkPathIdx"
 
