@@ -23,7 +23,7 @@ suod apt-get -y install git-core subversion quilt tree curl
 
 sudo apt-get -y install vim-gtk meld minicom tftp-hpa tftpd-hpa
 
-sudo apt-get -y install smbfs nfs-kernel-server 
+sudo apt-get -y install smbfs cifs-utils nfs-kernel-server 
 
 sudo apt-get -y install squashfs-tools
 
