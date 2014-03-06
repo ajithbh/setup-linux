@@ -257,6 +257,8 @@ let g:easytags_dynamic_files = 1
 
 _EOF
 
+vim +BundleUpdate +qa
+
 # Japanese manual cause problems for Vundle
 rm ~/.vim/bundle/gccsense/doc/index.ja.txt
 rm ~/.vim/bundle/gccsense/doc/manual.ja.txt
