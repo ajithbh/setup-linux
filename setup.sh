@@ -19,7 +19,7 @@
 
 set -o nounset                              # Treat unset variables as an error
 
-suod apt-get -y install git-core subversion quilt tree curl
+sudo apt-get -y install git-core subversion quilt tree curl
 
 sudo apt-get -y install vim-gtk meld minicom tftp-hpa tftpd-hpa
 
