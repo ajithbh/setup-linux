@@ -45,7 +45,7 @@ sudo apt-get -y install uuid uuid-dev
 sudo apt-get -y install liblzo2-2 liblzo2-dev
 
 # Develop 
-sudo apt-get -y install g++ exuberant-ctags cscope indent
+sudo apt-get -y install g++ exuberant-ctags cscope indent cppcheck
 
 # Scratchbox2
 sudo apt-get -y install scratchbox2 qemu-kvm-extras
@@ -268,5 +268,5 @@ dos2unix ~/.vim/bundle/c.vim--Zemin/doc/workpath.txt
 dos2unix ~/.vim/bundle/c.vim--Zemin/plugin/workpath.vim
 echo "Remember to edit  ~/.vim/bundle/c.vim--Zemin/plugin/workpath.vim  to set g:WorkPathList and g:WorkPathIdx"
 
-echo "-i4 -nbad -bap -bbb -cdb -sc -br -ce -cdw -cli4 -cbi0 -ss -npcs -cs -bs -saf -sai -saw -nbc -npsl -bls -blf -lp -ip0 -ppi3 -il0 -bbo -nprs -nut -sob -nfca -d0 -di1" > ~/.indent.pro
+echo "-i4 -nbad -bap -bbb -cdb -sc -br -ce -cdw -cli4 -cbi0 -ss -npcs -cs -bs -saf -sai -saw -nbc -npsl -bls -blf -lp -ip0 -ppi3 -il0 -bbo -nprs -nut -sob -nfca -d0 -di1 -l200" > ~/.indent.pro
 
