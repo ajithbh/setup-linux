@@ -236,6 +236,15 @@ let g:easytags_file = '~/.vim/tags'
 set tags=./tags;
 let g:easytags_dynamic_files = 1
 
+" c.vim options
+let g:WorkPathList=[
+            \ join(['/home/',\$USER,'/.vim/bundle/c.vim'],""),
+            \ join(['/home/',\$USER,'/.vim'],"") ]
+let g:WorkPathIdx=1
+
+" supertab options
+let g:SuperTabMappingForward = '<C-space>'
+
 :map <C-s> :w<CR>
 :imap <C-s> <ESC>:w<CR>
 
