@@ -47,6 +47,10 @@ sudo apt-get -y install liblzo2-2 liblzo2-dev
 # Develop 
 sudo apt-get -y install g++ exuberant-ctags cscope indent cppcheck
 
+sudo apt-get -y install python-pip
+
+sudo pip install virtualenv
+
 # Scratchbox2
 sudo apt-get -y install scratchbox2 qemu-kvm-extras
 
