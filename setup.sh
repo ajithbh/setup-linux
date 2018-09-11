@@ -102,7 +102,7 @@ _EOF
 # make && sudo make install
 # cd ~
 
-if [ ! -e /usr/bin/quilt ]; do
+if [ ! -e /usr/bin/quilt ]; then
     cd ~/Downloads
     wget http://download.savannah.gnu.org/releases/quilt/quilt-0.60.tar.gz
     tar xvzf quilt-0.60.tar.gz
@@ -111,7 +111,7 @@ if [ ! -e /usr/bin/quilt ]; do
     make
     sudo make install
     cd ~
-done
+fi
 
 
 git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle
