@@ -19,6 +19,9 @@
 
 set -o nounset                              # Treat unset variables as an error
 
+sudo apt-get -y install apt-file
+sudo apt-file update
+
 sudo apt-get -y install git-core subversion quilt tree curl
 
 sudo apt-get -y install vim-gtk meld minicom
@@ -33,7 +36,7 @@ sudo ln -s /usr/bin/todos /usr/bin/unix2dos
 
 sudo apt-get -y install zlibc zlib1g-dev
 
-sudo apt-get -y install libdirectfb-dev libtiff4-dev
+sudo apt-get -y install libdirectfb-dev libtiff5-dev
 
 # Manpages
 sudo apt-get -y install manpages-posix manpages-posix-dev
@@ -45,7 +48,9 @@ sudo apt-get -y install uuid uuid-dev
 sudo apt-get -y install liblzo2-2 liblzo2-dev
 
 # Develop 
-sudo apt-get -y install g++ exuberant-ctags cscope indent cppcheck build-essential fakeroot
+sudo apt-get -y install build-essential libncurses-dev bison flex libssl-dev libelf-dev
+
+sudo apt-get -y install g++ exuberant-ctags cscope indent cppcheck fakeroot
 
 sudo apt-get -y install python-pip
 
