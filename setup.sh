@@ -19,9 +19,6 @@
 
 set -o nounset                              # Treat unset variables as an error
 
-sudo apt-get -y install apt-file
-sudo apt-file update
-
 sudo apt-get -y install git-core subversion quilt tree curl
 
 sudo apt-get -y install vim-gtk meld minicom
@@ -59,9 +56,8 @@ sudo pip install virtualenv
 # Scratchbox2
 sudo apt-get -y install scratchbox2 qemu-kvm-extras
 
-sudo apt-get -y install zsh
-
-sh -c "$(wget https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)"
+sudo apt-get -y install apt-file
+sudo apt-file update
 
 sudo apt-get -y install tmux
 
@@ -122,4 +118,8 @@ fi
 ./setup_vim.sh
 
 echo "-i4 -nbad -bap -bbb -cdb -sc -br -ce -cdw -cli4 -cbi0 -ss -npcs -cs -bs -saf -sai -saw -nbc -npsl -brs -blf -lp -ip0 -ppi1 -il0 -bbo -nprs -nut -sob -nfca -d0 -di1 -l200" > ~/.indent.pro
+
+sudo apt-get -y install zsh
+
+sh -c "$(wget https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)"
 
