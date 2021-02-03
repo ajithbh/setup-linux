@@ -102,6 +102,8 @@ done
 # Update apt-file database
 sudo apt-file update
 
+# Download tmux plugin manager
+git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 # Configure tmux
 cat > ~/.tmux.conf << _EOF
 set -g prefix C-a
