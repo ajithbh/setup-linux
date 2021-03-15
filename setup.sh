@@ -178,6 +178,13 @@ setup_zsh()
 {
     # Set default shell as zsh
     sh -c "$(wget https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)"
+    infocmp $TERM >terminfo.src
+    sed -i 's/EOF/E[4~/g' terminfo.src
+    sed -i 's/EOH/E[1~/g' terminfo.src
+    tic terminfo.src
+    echo 'bindkey "${terminfo[khome]}" beginning-of-line' >> ~/.zshrc
+    echo 'bindkey "${terminfo[kend]}" end-of-line' >> ~/.zshrc
+    rm terminfo.src
 }
 
 setup_all()
