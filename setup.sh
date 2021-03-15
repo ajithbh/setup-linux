@@ -283,5 +283,5 @@ dos2unix ~/.vim/bundle/c.vim--Zemin/doc/workpath.txt
 dos2unix ~/.vim/bundle/c.vim--Zemin/plugin/workpath.vim
 echo "Remember to edit  ~/.vim/bundle/c.vim--Zemin/plugin/workpath.vim  to set g:WorkPathList and g:WorkPathIdx"
 
-echo "-i4 -nbad -bap -bbb -cdb -sc -br -ce -cdw -cli4 -cbi0 -ss -npcs -cs -bs -saf -sai -saw -nbc -npsl -bls -blf -lp -ip0 -ppi3 -il0 -bbo -nprs -nut -sob -nfca -d0 -di1 -l200" > ~/.indent.pro
+echo "-i4 -nbad -bap -bbb -cdb -sc -br -ce -cdw -cli4 -cbi0 -ss -npcs -cs -bs -saf -sai -saw -nbc -npsl -brs -blf -lp -ip0 -ppi1 -il0 -bbo -nprs -nut -sob -nfca -d0 -di1 -l200" > ~/.indent.pro
 
