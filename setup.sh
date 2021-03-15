@@ -247,7 +247,7 @@ let g:WorkPathList=[
 let g:WorkPathIdx=1
 
 " supertab options
-let g:SuperTabMappingForward = '<C-space>'
+" let g:SuperTabMappingForward = '<C-space>'
 
 :map <C-s> :w<CR>
 :imap <C-s> <ESC>:w<CR>
@@ -267,6 +267,8 @@ let g:SuperTabMappingForward = '<C-space>'
 :imap <S-F5> <ESC>:tabprev<CR>
 :map <F5> :tabnext<CR>
 :imap <F5> <ESC>:tabnext<CR>
+:map <F6> :mks!<CR>
+:imap <F6> <ESC>:mks!<CR>
 
 _EOF
 
