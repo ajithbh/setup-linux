@@ -54,6 +54,36 @@ sudo pip install virtualenv
 # Scratchbox2
 sudo apt-get -y install scratchbox2 qemu-kvm-extras
 
+sudo apt-get -y install zsh
+
+sh -c "$(wget https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)"
+
+sudo apt-get -y install tmux
+
+cat > ~/.tmux.conf << _EOF
+set -g prefix C-a
+unbind-key C-b
+bind-key C-a send-prefix
+
+set -g base-index 1
+
+set -g default-shell /bin/zsh
+
+# List of plugins
+set -g @plugin 'tmux-plugins/tpm'
+set -g @plugin 'tmux-plugins/tmux-sensible'
+set -g @plugin 'tmux-plugins/tmux-resurrect'
+
+# Other examples:
+# set -g @plugin 'github_username/plugin_name'
+# set -g @plugin 'git@github.com/user/plugin'
+# set -g @plugin 'git@bitbucket.com/user/plugin'
+
+# Initialize TMUX plugin manager (keep this line at the very bottom of tmux.conf)
+run '~/.tmux/plugins/tpm/tpm'
+_EOF
+
+
 # qemu_version=`qemu-arm --version | awk ' /version/ {print $3}'`
 # Scratchbox2 needs atleast version 0.13 of qemu 
 # cd /tmp/
@@ -72,14 +102,16 @@ sudo apt-get -y install scratchbox2 qemu-kvm-extras
 # make && sudo make install
 # cd ~
 
-cd ~/Downloads
-wget http://download.savannah.gnu.org/releases/quilt/quilt-0.60.tar.gz
-tar xvzf quilt-0.60.tar.gz
-cd quilt-0.60
-./configure
-make
-sudo make install
-cd ~
+if [ ! -e /usr/bin/quilt ]; do
+    cd ~/Downloads
+    wget http://download.savannah.gnu.org/releases/quilt/quilt-0.60.tar.gz
+    tar xvzf quilt-0.60.tar.gz
+    cd quilt-0.60
+    ./configure
+    make
+    sudo make install
+    cd ~
+done
 
 
 git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle
@@ -123,6 +155,7 @@ Bundle 'tomtom/tlib_vim'
 Bundle 'garbas/vim-snipmate'
 Bundle 'honza/vim-snippets'
 Bundle 'tpope/vim-sensible.git'
+Bundle 'wincent/command-t.git'
 " Bundle 'tpope/vim-rails.git'
 " The sparkup vim script is in a subdirectory of this repo called vim.
 " Pass the path to set the runtimepath properly.
@@ -132,8 +165,7 @@ Bundle 'L9'
 Bundle 'FuzzyFinder'
 " Bundle 'lh-vim-lib'
 " scripts not on GitHub
-Bundle 'git://git.wincent.com/command-t.git'
-Bundle 'http://cx4a.org/repo/gccsense.git'
+" Bundle 'http://cx4a.org/repo/gccsense.git'
 " git repos on your local machine (i.e. when working on your own plugin)
 " Bundle 'file:///home/gmarik/path/to/plugin'
 " ...
