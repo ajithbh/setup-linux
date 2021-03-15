@@ -252,3 +252,11 @@ set sw=4
 
 _EOF
 
+# Japanese manual cause problems for Vundle
+rm ~/.vim/bundle/gccsense/doc/index.ja.txt
+rm ~/.vim/bundle/gccsense/doc/manual.ja.txt
+
+dos2unix ~/.vim/bundle/c.vim--Zemin/after/syntax/c.vim
+dos2unix ~/.vim/bundle/c.vim--Zemin/doc/workpath.txt
+echo "Remember to edit  ~/.vim/bundle/c.vim--Zemin/plugin/workpath.vim  to set g:WorkPathList and g:WorkPathIdx"
+
