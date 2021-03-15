@@ -202,3 +202,5 @@ dos2unix ~/.vim/bundle/c.vim--Zemin/plugin/workpath.vim
 echo "Editing  ~/.vim/bundle/c.vim--Zemin/plugin/workpath.vim to conditionally set g:WorkPathList and g:WorkPathIdx"
 sed -i '/^let g:WorkPathList=.*/i if empty(g:WorkPathList)' ~/.vim/bundle/c.vim--Zemin/plugin/workpath.vim
 sed -i '/^let g:WorkPathIdx=.*/a endif' ~/.vim/bundle/c.vim--Zemin/plugin/workpath.vim
+echo "Editing  ~/.vim/bundle/c.vim--Zemin/after/syntax/c.vim to fix tags path"
+sed -i 's:\\tags:/tags:g' ~/.vim/bundle/c.vim--Zemin/after/syntax/c.vim
