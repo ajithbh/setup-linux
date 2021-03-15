@@ -231,6 +231,11 @@ set et
 set ts=4
 set sw=4
 
+" Easytags opitions
+let g:easytags_file = '~/.vim/tags'
+set tags=./tags;
+let g:easytags_dynamic_files = 1
+
 :map <C-s> :w<CR>
 :imap <C-s> <ESC>:w<CR>
 
