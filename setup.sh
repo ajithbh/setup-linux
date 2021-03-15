@@ -45,7 +45,7 @@ sudo apt-get -y install uuid uuid-dev
 sudo apt-get -y install liblzo2-2 liblzo2-dev
 
 # Develop 
-sudo apt-get -y install g++ exuberant-ctags cscope indent cppcheck
+sudo apt-get -y install g++ exuberant-ctags cscope indent cppcheck build-essential fakeroot
 
 sudo apt-get -y install python-pip
 
