@@ -115,6 +115,24 @@ set -g base-index 1
 
 set -g default-shell /bin/zsh
 
+# Custom Theme
+set -g default-terminal "screen-256color"
+set -g status-fg white
+set -g status-bg colour235
+set -g window-status-activity-style bold
+set -g pane-border-style fg=colour245
+set -g pane-active-border-style fg=colour82
+set -g message-style fg=colour16
+set -g message-style bg=colour221
+set -g message-style bold
+set -g status-left-length 32
+set -g status-right-length 150
+set -g status-interval 5
+set -g status-left '#[fg=colour235,bg=colour194,bold] ❐ #S #[fg=colour194,bg=colour221,nobold]⮀#[fg=colour235,bg=colour221,bold] #(whoami) #[fg=colour221,bg=colour235,nobold]⮀'
+set -g status-right '#[fg=colour238,bg=colour235,nobold]⮂#[fg=colour252,bg=colour238] %Y-%m-%d ⮃ #[fg=colour252]%H:%M #[fg=colour34]⮂#[fg=colour235,bg=colour34,bold] #h '
+set -g window-status-format "#[fg=white,bg=colour235] #I #W "
+set-window-option -g window-status-current-format "#[fg=colour235, bg=colour27]⮀#[fg=colour228, bg=colour27] #I ⮁ #W #[fg=colour27, bg=colour235]⮀"
+
 # List of plugins
 set -g @plugin 'tmux-plugins/tpm'
 set -g @plugin 'tmux-plugins/tmux-sensible'
@@ -176,12 +194,14 @@ setup_indent()
 
 setup_zsh()
 {
+    echo 'export TERM=xterm-256color' >> ~/.zshrc
     # Set default shell as zsh
     sh -c "$(wget https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)"
     infocmp $TERM >terminfo.src
     sed -i 's/EOF/E[4~/g' terminfo.src
     sed -i 's/EOH/E[1~/g' terminfo.src
     tic terminfo.src
+    echo 'export TERMINFO=~/.terminfo' >> ~/.zshrc
     echo 'bindkey "${terminfo[khome]}" beginning-of-line' >> ~/.zshrc
     echo 'bindkey "${terminfo[kend]}" end-of-line' >> ~/.zshrc
     rm terminfo.src
