@@ -187,6 +187,8 @@ let g:WorkPathIdx=1
 :imap <F5> <ESC>:tabnext<CR>
 :map <F6> :mks!<CR>
 :imap <F6> <ESC>:mks!<CR>
+:map <F7> :Texplore<CR>
+:imap <F7> <ESC>:Texplore<CR>
 
 _EOF
 
