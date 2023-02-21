@@ -190,6 +190,8 @@ let g:WorkPathIdx=1
 :map <F7> :Texplore<CR>
 :imap <F7> <ESC>:Texplore<CR>
 
+autocmd FileType gitcommit setlocal spell
+
 _EOF
 
 vim +BundleUpdate +qa
